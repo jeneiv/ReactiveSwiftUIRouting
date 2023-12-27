@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490156682B3C4F4D0095855E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490156672B3C4F4D0095855E /* Logger.swift */; };
+		4901566B2B3C52C40095855E /* ApplicationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901566A2B3C52C40095855E /* ApplicationRoute.swift */; };
 		499AD9B52B2EE5F400C1D668 /* ReactiveSwiftUIRoutingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AD9B42B2EE5F400C1D668 /* ReactiveSwiftUIRoutingApp.swift */; };
 		499AD9B92B2EE5F500C1D668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499AD9B82B2EE5F500C1D668 /* Assets.xcassets */; };
 		499AD9BC2B2EE5F500C1D668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499AD9BB2B2EE5F500C1D668 /* Preview Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490156672B3C4F4D0095855E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		4901566A2B3C52C40095855E /* ApplicationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRoute.swift; sourceTree = "<group>"; };
 		499AD9B12B2EE5F400C1D668 /* ReactiveSwiftUIRouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveSwiftUIRouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499AD9B42B2EE5F400C1D668 /* ReactiveSwiftUIRoutingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSwiftUIRoutingApp.swift; sourceTree = "<group>"; };
 		499AD9B82B2EE5F500C1D668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490156662B3C4F330095855E /* Functional */ = {
+			isa = PBXGroup;
+			children = (
+				490156672B3C4F4D0095855E /* Logger.swift */,
+			);
+			path = Functional;
+			sourceTree = "<group>";
+		};
+		490156692B3C52B40095855E /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				4901566A2B3C52C40095855E /* ApplicationRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
 		499AD9A82B2EE5F400C1D668 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +149,8 @@
 		499AD9DE2B2EE62800C1D668 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				490156692B3C52B40095855E /* Route */,
+				490156662B3C4F330095855E /* Functional */,
 				499AD9DF2B2EE63400C1D668 /* Views */,
 				499AD9B42B2EE5F400C1D668 /* ReactiveSwiftUIRoutingApp.swift */,
 			);
@@ -273,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4901566B2B3C52C40095855E /* ApplicationRoute.swift in Sources */,
 				499AD9B52B2EE5F400C1D668 /* ReactiveSwiftUIRoutingApp.swift in Sources */,
+				490156682B3C4F4D0095855E /* Logger.swift in Sources */,
 				499AD9E12B2EE64F00C1D668 /* ApplicationContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

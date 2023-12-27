@@ -6,25 +6,33 @@
 //
 
 import SwiftUI
+import os
+
+// MARK: Views
 
 struct ApplicationContainerView: View {
+    @EnvironmentObject var applicationRoute: ApplicationRoute
+
     var body: some View {
-        TabView {
+        TabView(selection: $applicationRoute.rootPath) {
             let items = [
                 Item(id: 1, name: "First", description: "This is the first item"),
                 Item(id: 2, name: "Second", description: "This is the second item"),
                 Item(id: 3, name: "Third", description: "This is the third item"),
                 Item(id: 4, name: "Forth", description: "This is the forth item"),
             ]
-            let viewModel = ListViewModel(items: items, selectedItem: items[1])
+            // let viewModel = ListViewModel(items: items, selectedItem: items[1])
+            let viewModel = ListViewModel(items: items)
             ListView(viewModel: viewModel)
                 .tabItem {
                     Label("Menu", systemImage: "list.dash")
                 }
+                .tag(ApplicationRoute.RootPath.items)
             ProfileView()
                 .tabItem {
                     Label("Settings", systemImage: "person")
                 }
+                .tag(ApplicationRoute.RootPath.settigns)
         }
     }
 }
@@ -76,9 +84,6 @@ struct ItemView: View {
             Text(item.description)
         }
         .navigationTitle(item.name)
-        .onAppear {
-            print("Item: \(item)")
-        }
     }
 }
 
@@ -90,4 +95,6 @@ struct ProfileView: View {
 
 #Preview {
     ApplicationContainerView()
+        .environmentObject(ApplicationRoute(rootPath: .items))
 }
+
